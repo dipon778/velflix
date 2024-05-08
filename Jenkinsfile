@@ -1,6 +1,6 @@
 node {
     stage('download') {
-        git branch: 'main', url: 'https://github.com/dipon778/velflix.git'
+        git branch: 'jenkins', url: 'https://github.com/dipon778/velflix.git'
     }
     stage('install') {
         sh 'composer install'
