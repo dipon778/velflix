@@ -63,7 +63,7 @@
             <div>
                 <div class="text-4xl">Watch everywhere.</div>
                 <div class="text-2xl">
-                    Stream All the fuk movies and TV shows on your phone, tablet, laptop, and TV. </div>
+                    Stream All the fuk what is happening  movies and TV shows on your phone, tablet, laptop, and TV. </div>
             </div>
         </div>
         <img width="600" src="{{ asset('img/img3.png') }}" />
