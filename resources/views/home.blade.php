@@ -32,7 +32,7 @@
             <div>
                 <div class="text-4xl">Enjoy on your TV.</div>
                 <div class="text-2xl">
-                    watch on Smart TV, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
+                    WHATTTTTTTTTTTT, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
                 </div>
             </div>
         </div>
