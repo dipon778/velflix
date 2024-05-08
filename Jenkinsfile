@@ -30,19 +30,5 @@ node {
     	
     	'''
     }
-//     stage('integration_testing') {
-//     	sh 'vendor/bin/phpunit tests/Feature'
-//     }
-//     stage('acceptance_testing') {
-//     	// Because we'll use database as session driver during testing, we have to explictly migrate sessions table.
-//         sh 'php artisan migrate'
-//     	sh 'cp .env .env.dusk.local'
-//     	sh "sed -i -e 's;APP_URL=http://localhost;APP_URL=your.domain.com;g' .env.dusk.local"
-//     	// Use database as session driver instead of file so that every single test will not share the same session context.
-//     	sh "sed -i -e 's/SESSION_DRIVER=file/SESSION_DRIVER=database/g' .env.dusk.local"
-//     	// Allow web server to access storage directory.
-//     	sh 'sudo chmod -R 775 storage/'
-//     	sh 'sudo chown -R :www-data storage/'
-//     	sh 'php artisan dusk'
-//     }
+
 }
