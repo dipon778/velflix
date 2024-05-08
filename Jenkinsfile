@@ -21,7 +21,7 @@ node {
     	
     	sudo rm -rf /var/www/velflix/*
     	pwd
-    	sudo mv  * /var/www/velflix
+    	sudo cp -r   * /var/www/velflix
     	
     	cd /var/www/velflix
     	sudo chown -R www-data storage
