@@ -29,7 +29,7 @@ RUN composer install --no-plugins --no-scripts
 
 # Install PHP dependencies
 
-
+RUN pwd && ls -la
 RUN php artisan key:generate
 RUN sed -i -e 's/DB_PASSWORD=homestead/DB_PASSWORD=password/g' .env
 RUN sed -i -e 's/DB_DATABASE=homestead/DB_DATABASE=velflix/g' .env
