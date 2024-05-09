@@ -1,9 +1,6 @@
 # Use an official PHP runtime as a parent image
 FROM php:8.2-cli as builder
 
-# Set the working directory in the container
-WORKDIR /var/www/html
-
 # Install dependencies
 RUN apt-get update && apt-get install -y \
     curl \
@@ -39,6 +36,7 @@ RUN sed -i -e 's/TMDB_TOKEN=homestead/TMDB_TOKEN=eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOi
 
 # Copy the rest of the application code
 COPY . .
+
 RUN npm install && npm run build
 RUN php artisan migrate
 RUN php artisan db:seed
