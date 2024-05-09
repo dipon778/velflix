@@ -20,14 +20,13 @@ RUN docker-php-ext-install pdo pdo_mysql gd mbstring exif pcntl bcmath xml
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
-# Copy composer.json and composer.lock
+RUN composer install --no-dev --optimize-autoloader
 RUN composer -v
 
 
-RUN cp /usr/local/bin/artisan .
+
 # Install PHP dependencies
-RUN composer install
+
 RUN php artisan package:discover --ansi 
 RUN cp .env.example .env
 RUN php artisan key:generate
