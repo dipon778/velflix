@@ -24,10 +24,11 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Copy composer.json and composer.lock
 COPY composer.json composer.lock ./
 
-# Install PHP dependencies
 
-RUN php artisan package:discover --ansi 
+RUN cp /usr/local/bin/artisan .
+# Install PHP dependencies
 RUN composer install
+RUN php artisan package:discover --ansi 
 RUN cp .env.example .env
 RUN php artisan key:generate
 RUN sed -i -e 's/DB_PASSWORD=homestead/DB_PASSWORD=password/g' .env
