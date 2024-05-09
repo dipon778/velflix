@@ -1,0 +1,12 @@
+phpunit.xml
+artisan
+tests/
+features/
+storage/framework/*
+storage/logs/*
+bootstrap/cache/*
+public/cache/*
+node_modules
+vendor/bin/*
+.git*
+.idea*
