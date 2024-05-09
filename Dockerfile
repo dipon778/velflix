@@ -22,7 +22,7 @@ RUN docker-php-ext-install pdo pdo_mysql gd mbstring exif pcntl bcmath xml
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Copy composer.json and composer.lock
-COPY composer.json composer.lock ./
+RUN composer -v
 
 
 RUN cp /usr/local/bin/artisan .
