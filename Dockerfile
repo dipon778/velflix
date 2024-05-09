@@ -33,8 +33,8 @@ RUN cp .env.example .env
 RUN php artisan key:generate
 RUN sed -i -e 's/DB_PASSWORD=homestead/DB_PASSWORD=password/g' .env
 RUN sed -i -e 's/DB_DATABASE=homestead/DB_DATABASE=velflix/g' .env
-RUN sed -i -e 's/DB_HOST=homestead/DB_HOST=192.168.51.228/g' .env
-RUN sed -i -e 's/DB_USERNAME=homestead/DB_USERNAME=root/g' .env
+RUN sed -i -e 's/DB_HOST=homestead/DB_HOST=34.94.240.81/g' .env
+RUN sed -i -e 's/DB_USERNAME=homestead/DB_USERNAME=velflix/g' .env
 RUN sed -i -e 's/TMDB_TOKEN=homestead/TMDB_TOKEN=eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMDQ0ZmJmMjBlZTQ1Y2JmMDJkYTQ5Zjk4NDk3NTZiOSIsInN1YiI6IjY2M2JiOWQzM2ZiZmVjZDVkNzA1ZDQwNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.A0xaHvjWf1ykSVJ7ZL170mJcXfvs4bu17oCHuDcZ9Q4/g' .env
 
 # Copy the rest of the application code
