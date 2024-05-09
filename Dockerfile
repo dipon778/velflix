@@ -24,7 +24,6 @@ COPY composer.lock composer.lock
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer install --no-plugins --no-scripts
-RUN composer -v
 
 
 
