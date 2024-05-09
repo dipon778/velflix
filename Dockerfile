@@ -21,7 +21,7 @@ RUN docker-php-ext-install pdo pdo_mysql gd mbstring exif pcntl bcmath xml
 # Install Composer
 # RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN curl -s http://getcomposer.org/installer | php
-RUN php composer.phar update --no-plugins --no-scripts ...
+RUN php composer.phar install --no-plugins --no-scripts ...
 RUN composer install --no-dev --optimize-autoloader
 RUN composer -v
 
