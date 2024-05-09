@@ -29,7 +29,6 @@ RUN composer install --no-plugins --no-scripts
 
 # Install PHP dependencies
 
-RUN php artisan package:discover --ansi 
 RUN cp .env.example .env
 RUN php artisan key:generate
 RUN sed -i -e 's/DB_PASSWORD=homestead/DB_PASSWORD=password/g' .env
