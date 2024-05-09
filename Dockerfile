@@ -28,7 +28,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 COPY composer.json composer.lock ./
 
 # Install PHP dependencies
-RUN composer install --no-dev --optimize-autoloader
+RUN composer install 
 RUN cp .env.example .env
 RUN php artisan key:generate
 RUN sed -i -e 's/DB_PASSWORD=homestead/DB_PASSWORD=password/g' .env
